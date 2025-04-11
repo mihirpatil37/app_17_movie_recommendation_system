@@ -48,40 +48,89 @@ Insight: The weighted rating formula balances between rating quality (R) and vot
 
 $$WR = \frac{v}{v+m} \times R + \frac{m}{v+m} \times C$$
 
-### 2. Content-Based Filtering
+## 2. Content-Based Filtering
+
 **Concept**: Recommends similar movies based on content features.
 
 **Key Visualizations**:
 
-```Python
-
+```python
 import matplotlib.pyplot as plt
 
 plt.barh(top_words, top_scores)
 plt.title(f'Top {n_words} Important Words in "{movie_title}"')
 plt.show()
-Insight: Uses TF-IDF vectorization of movie overviews to calculate content similarity.
 
-### 3. Collaborative Filtering (SVD)
+## 3. Collaborative Filtering (SVD)
+
 **Concept**: Finds patterns in user-movie ratings using matrix factorization.
 
 **Key Visualizations**:
 
-```Python
-
+```python
 import matplotlib.pyplot as plt
 
 plt.subplot(1, 2, 1)
 plt.plot(history.history['loss'])
 plt.title('Model Loss')
 plt.show()
-Performance:
 
-Average RMSE: 0.85
-Average MAE: 0.65
-4. Neural Collaborative Filtering
-Concept: Deep learning model for complex user-item interactions.
+## 4. Neural Collaborative Filtering
 
-### Model Architecture:
+**Concept**: Deep learning model for complex user-item interactions.
 
-Embedding Layers → Concatenation → Dense Layers (128, 64, 32) → Output 📊 Comparative Analysis Approach Personalization Cold Start Complexity Best For Popularity-Based None Excellent Low New users Content-Based Medium Good Medium Similar item discovery Collaborative (SVD) High Poor Medium Existing users Neural CF Very High Poor High Large-scale systems Export to Google Sheets 🏆 Best Recommendation System Optimal Choices: General Purpose: Collaborative Filtering (SVD) Cold Start: Content-Based Maximum Performance: Neural CF Simple Baseline: Popularity-Based 💻 Installation Bash git clone \[\[https://github.com/yourusername/movie-recommendation-system.git\](https://github.com/yourusername/movie-recommendation-system.git) cd movie-recommendation-system\](https://github.com/mihirpatil37/app\_17\_movie\_recommendation\_system.git) pip install -r requirements.txt Requirements: Python 3.7+ pandas, numpy, matplotlib, seaborn scikit-learn, surprise TensorFlow ≥ 2.0 📂 Dataset Required files: movies.csv ratings.csv credits.csv Dataset structure: ├── data/ │ ├── movies.csv │ ├── ratings.csv │ └── credits.csv 🚀 Future Work Hybrid recommendation system Real-time API endpoint Streamlit web interface Docker deployment 📜 License MIT License - See LICENSE for details.
+**Model Architecture**:
+## 📊 Comparative Analysis
+
+| Approach                | Personalization | Cold Start | Complexity | Best For                |
+|-------------------------|-----------------|------------|------------|-------------------------|
+| Popularity-Based        | None            | Excellent  | Low        | New users               |
+| Content-Based           | Medium          | Good       | Medium     | Similar item discovery  |
+| Collaborative (SVD)     | High            | Poor       | Medium     | Existing users          |
+| Neural CF               | Very High       | Poor       | High       | Large-scale systems     |
+
+## 🏆 Best Recommendation System
+
+**Optimal Choices**:
+
+- General Purpose: Collaborative Filtering (SVD)
+- Cold Start: Content-Based
+- Maximum Performance: Neural CF
+- Simple Baseline: Popularity-Based
+
+## 💻 Installation
+
+```bash
+git clone [https://github.com/yourusername/movie-recommendation-system.git](https://github.com/yourusername/movie-recommendation-system.git)
+cd movie-recommendation-system
+
+**Requirements**:
+
+- Python 3.7+
+- pandas, numpy, matplotlib, seaborn
+- scikit-learn, surprise
+- TensorFlow ≥ 2.0
+
+## 📂 Dataset
+
+**Required files**:
+
+- `movies.csv`
+- `ratings.csv`
+- `credits.csv`
+
+**Dataset structure**:
+├── data/
+│   ├── movies.csv
+│   ├── ratings.csv
+│   └── credits.csv
+
+## 🚀 Future Work
+
+- Hybrid recommendation system
+- Real-time API endpoint
+- Streamlit web interface
+- Docker deployment
+
+
+
