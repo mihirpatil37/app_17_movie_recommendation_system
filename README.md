@@ -6,76 +6,30 @@
 
 A comprehensive movie recommendation system implementing four distinct recommendation approaches with detailed visual analytics.
 
-## 📌 Table of Contents
-
-- [Project Overview](#-project-overview)
-- [Approaches](#-approaches)
-  - [Popularity-Based Filtering](#1-popularity-based-filtering)
-  - [Content-Based Filtering](#2-content-based-filtering)
-  - [Collaborative Filtering (SVD)](#3-collaborative-filtering-svd)
-  - [Neural Collaborative Filtering](#4-neural-collaborative-filtering)
-- [Comparative Analysis](#-comparative-analysis)
-- [Best Recommendation System](#-best-recommendation-system)
-- [Installation](#-installation)
-- [Dataset](#-dataset)
-- [Future Work](#-future-work)
-- [License](#-license)
-
 ## 🎥 Project Overview
 
 This system provides movie recommendations using four different algorithmic approaches, each with specialized visualizations to demonstrate their characteristics and performance.
 
-![System Architecture](https://via.placeholder.com/800x400?text=System+Architecture+Diagram)
-
 ## 🔍 Approaches
 
-### 1. Popularity-Based Filtering
+### Popularity-Based Filtering
 
 **Concept**: Recommends generally popular movies based on aggregate ratings.
-
-**Key Visualizations**:
-
-```python
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-plt.figure(figsize=(12, 8))
-sns.barplot(x='weighted_rating', y='title', data=top_movies)
-plt.title('Top 10 Movies by Weighted Rating')
-plt.show()
 
 Insight: The weighted rating formula balances between rating quality (R) and vote count (v).
 
 $$WR = \frac{v}{v+m} \times R + \frac{m}{v+m} \times C$$
 
-## 2. Content-Based Filtering
+### Content-Based Filtering
 
 **Concept**: Recommends similar movies based on content features.
 
-**Key Visualizations**:
-
-```python
-import matplotlib.pyplot as plt
-
-plt.barh(top_words, top_scores)
-plt.title(f'Top {n_words} Important Words in "{movie_title}"')
-plt.show()
-
-## 3. Collaborative Filtering (SVD)
+## Collaborative Filtering (SVD)
 
 **Concept**: Finds patterns in user-movie ratings using matrix factorization.
 
-**Key Visualizations**:
 
-```python
-import matplotlib.pyplot as plt
-
-plt.subplot(1, 2, 1)
-plt.plot(history.history['loss'])
-plt.title('Model Loss')
-plt.show()
-
-## 4. Neural Collaborative Filtering
+## Neural Collaborative Filtering
 
 **Concept**: Deep learning model for complex user-item interactions.
 
