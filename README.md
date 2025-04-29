@@ -57,8 +57,8 @@ $$WR = \frac{v}{v+m} \times R + \frac{m}{v+m} \times C$$
 ```bash
 git clone [https://github.com/yourusername/movie-recommendation-system.git](https://github.com/yourusername/movie-recommendation-system.git)
 cd movie-recommendation-system
-
-**Requirements**:
+```
+Requirements:
 
 - Python 3.7+
 - pandas, numpy, matplotlib, seaborn
@@ -67,7 +67,7 @@ cd movie-recommendation-system
 
 ## 📂 Dataset
 
-**Required files**:
+Required files:
 
 - `movies.csv`
 - `ratings.csv`
